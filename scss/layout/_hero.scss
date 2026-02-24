@@ -10,6 +10,7 @@
     background-color: $color-black;
     @include flex-center;
     z-index: 10000;
+    overflow: hidden;
 
     &__spinner {
         width: 100px;

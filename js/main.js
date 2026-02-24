@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     delay: 3,
                     onComplete: () => {
                         gsap.set(preloader, { display: 'none' });
-                        gsap.set('body', { overflow: 'auto' });
+                        gsap.set('body', { overflowY: 'auto' });
                         ScrollTrigger.refresh();
                     }
                 });
@@ -170,10 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 0.5,
             ease: 'power2.out'
         }, 0.5);
-
-        return () => {
-            // Cleanup if needed
-        };
     });
 
     const cursorDot = document.querySelector('.cursor-dot');
