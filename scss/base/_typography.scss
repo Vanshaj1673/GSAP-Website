@@ -1,0 +1,27 @@
+@use '../abstracts/variables' as *;
+
+@font-face {
+    font-family: 'ogg-roman';
+    src: url('../assets/Ogg-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: $font-family-main;
+    font-size: $font-size-base;
+    color: $color-black;
+    line-height: 1.5;
+    background-color: $color-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.1;
+}

@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: $color-white;
+    border-radius: 50%;
+    z-index: 10002;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    @include flex-center;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+
+    &.cursor--hovering {
+        background-color: transparent;
+        mix-blend-mode: normal;
+        width: 8.4vw;
+        height: 8.4vw;
+
+        .cursor-text {
+            opacity: 1;
+        }
+    }
+}
+
+.cursor-text {
+    opacity: 0;
+    color: $color-white;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-family: $font-family-system;
+    white-space: nowrap;
+}
+
+.cursor-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    z-index: 10001;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition: width 0.3s ease,
+        height 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        opacity 0.3s ease;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+
+    &--active,
+    &.cursor--hovering {
+        width: 60px;
+        height: 60px;
+        background-color: $color-white-transparent;
+        border-color: transparent;
+    }
+
+    &.cursor--hovering {
+        width: 8.4vw;
+        height: 8.4vw;
+        background-color: $color-black;
+        border-color: $color-black;
+        mix-blend-mode: normal;
+    }
+}

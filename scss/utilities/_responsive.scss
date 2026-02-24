@@ -1,0 +1,209 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+@include respond-to($bp-md) {
+    .sidebar {
+        width: 80px;
+
+        &__home {
+            font-size: 100px;
+        }
+    }
+
+    .marquee {
+        left: 80px;
+        width: 120px;
+
+        &__item {
+            font-size: 80px;
+        }
+    }
+
+    .hero {
+        &__title {
+            right: 4vw;
+
+            &-graphic {
+                font-size: 8vw;
+            }
+
+            &-name {
+                font-size: 7vw;
+            }
+        }
+    }
+
+    .circular-menu {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+// Tablet Portrait
+@include respond-to($bp-sm) {
+    .sidebar {
+        width: 60px;
+        display: flex !important;
+
+        &__home {
+            font-size: 80px;
+        }
+    }
+
+    .marquee {
+        display: block !important;
+        left: 60px;
+        width: 40px;
+
+        &__item {
+            font-size: 35px;
+            padding: 20px 0;
+        }
+    }
+
+    .hero {
+        &__title {
+            top: 10vh;
+            right: 4vw;
+
+            &-graphic {
+                font-size: 11vw;
+                margin-right: -1vw;
+            }
+
+            &-name {
+                font-size: 10vw;
+            }
+        }
+
+        &__image {
+            top: 18vh;
+            height: 82vh;
+            left: 40px;
+            right: 0;
+            width: auto;
+        }
+    }
+
+    .circular-menu {
+        width: 70px;
+        height: 70px;
+        top: 3vh;
+        right: 4vw;
+    }
+
+    .scroll-next-section {
+        &__label {
+            font-size: 2.8rem;
+        }
+
+        &__title {
+            font-size: 3.8rem;
+        }
+
+        &__arrow {
+            width: 70px;
+        }
+    }
+
+    .content,
+    .gallery {
+        width: auto;
+        margin-left: 100px;
+        padding: 8vw 5vw;
+    }
+}
+
+// Mobile
+@include respond-to($bp-xs) {
+    .sidebar {
+        width: 45px;
+
+        &__home {
+            font-size: 55px;
+            -webkit-text-stroke: 1px $color-black;
+        }
+    }
+
+    .marquee {
+        left: 45px;
+        width: 30px;
+
+        &__item {
+            font-size: 25px;
+            padding: 15px 0;
+        }
+    }
+
+    .hero {
+        &__title {
+            top: 12vh;
+            right: 5vw;
+
+            &-graphic {
+                font-size: 15vw;
+            }
+
+            &-name {
+                font-size: 13vw;
+            }
+        }
+
+        &__image {
+            top: 25vh;
+            height: 75vh;
+            left: 30px;
+            right: 0;
+            width: auto;
+        }
+    }
+
+    .circular-menu {
+        width: 55px;
+        height: 55px;
+        top: 2vh;
+        right: 5vw;
+    }
+
+    .scroll-next-section {
+        &__link {
+            padding: 0 5vw;
+        }
+
+        &__text-wrapper {
+            gap: 0.3rem;
+        }
+
+        &__label {
+            font-size: 1.6rem;
+        }
+
+        &__title {
+            font-size: 2.2rem;
+        }
+
+        &__arrow {
+            width: 45px;
+        }
+    }
+
+    .content {
+        width: auto;
+        margin-left: 75px;
+        padding: 10vw 5vw;
+
+        &__title {
+            font-size: 2.2rem;
+        }
+
+        &__text {
+            font-size: 1.1rem;
+        }
+    }
+
+    .gallery {
+        width: auto;
+        margin-left: 75px;
+        padding: 0 5vw 4vw 0;
+    }
+}
